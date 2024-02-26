@@ -1,2 +1,2 @@
 # fpga-pract-miet
-FPGA Exercices
+Exercices taken from this [FPGA practical lessons repo](https://github.com/MPSU/FPGA_pract)
