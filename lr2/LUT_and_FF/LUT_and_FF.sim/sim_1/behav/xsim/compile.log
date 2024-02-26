@@ -1,0 +1,4 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/jrvv/Prog_dir/study/FPGA_pract/fpga-pract-miet/lr2/rtl/LUT_func.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module LUT_func
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/jrvv/Prog_dir/study/FPGA_pract/fpga-pract-miet/lr2/tb/tb_LUT_func.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_demo
