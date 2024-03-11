@@ -11,8 +11,6 @@ Time Resolution for simulation is 1ps
 Compiling module unisims_ver.FDSE_default
 Compiling module unisims_ver.x_lut2_mux4
 Compiling module unisims_ver.LUT2
-Compiling module unisims_ver.x_lut1_mux2
-Compiling module unisims_ver.LUT1
 Compiling module xil_defaultlib.LUT_func
 Compiling module xil_defaultlib.tb_demo
 Compiling module xil_defaultlib.glbl

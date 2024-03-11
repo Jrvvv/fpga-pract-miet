@@ -33,7 +33,6 @@ module LUT_func
 
     logic [3:0] a;
     logic [3:0] b;
-    logic [3:0] a_and_b;
     logic [3:0] res;
     
     assign a = a_i;
@@ -79,66 +78,37 @@ module LUT_func
         .D  (res[3])     // 1-bit Data input
     );
 
-    // ---------- a&b implememntation ----------
+    // ---------- ~(a&b) implememntation ----------
     LUT2 #(
-    .INIT(4'b1000)
-    ) LUT2_inst_a_and_b_0 (
-        .O(a_and_b[0]),   // LUT general output
+    .INIT(4'b0111)
+    ) LUT2_inst_my_func_0 (
+        .O(res[0]),   // LUT general output
         .I0(a[0]),        // LUT input
         .I1(b[0])         // LUT input
     );
 
     LUT2 #(
-    .INIT(4'b1000)
-    ) LUT2_inst_a_and_b_1 (
-        .O(a_and_b[1]),   // LUT general output
+    .INIT(4'b0111)
+    ) LUT2_inst_my_func_1 (
+        .O(res[1]),   // LUT general output
         .I0(a[1]),        // LUT input
         .I1(b[1])         // LUT input
     );
     
     LUT2 #(
-    .INIT(4'b1000)
-    ) LUT2_inst_a_and_b_2 (
-        .O(a_and_b[2]),   // LUT general output
+    .INIT(4'b0111)
+    ) LUT2_inst_my_func_2 (
+        .O(res[2]),   // LUT general output
         .I0(a[2]),        // LUT input
         .I1(b[2])         // LUT input
     );
     
     LUT2 #(
-    .INIT(4'b1000)
-    ) LUT2_inst_a_and_b_3 (
-        .O(a_and_b[3]),   // LUT general output
+    .INIT(4'b0111)
+    ) LUT2_inst_my_func_3 (
+        .O(res[3]),   // LUT general output
         .I0(a[3]),        // LUT input
         .I1(b[3])         // LUT input
     );
 
-    // ---------- ~(a&b) implememntation ----------
-    LUT1 #(
-    .INIT(2'b01)
-    ) LUT1_inst_n_a_and_b_0 (
-        .O(res[0]),           // LUT general output
-        .I0(a_and_b[0])       // LUT input
-    );
-        
-    LUT1 #(
-    .INIT(2'b01)
-    ) LUT1_inst_n_a_and_b_1 (
-        .O(res[1]),           // LUT general output
-        .I0(a_and_b[1])       // LUT input
-    );
-
-    LUT1 #(
-    .INIT(2'b01)
-    ) LUT1_inst_n_a_and_b_2 (
-        .O(res[2]),           // LUT general output
-        .I0(a_and_b[2])       // LUT input
-    );
-
-    LUT1 #(
-    .INIT(2'b01)
-    ) LUT1_inst_n_a_and_b_3 (
-        .O(res[3]),           // LUT general output
-        .I0(a_and_b[3])       // LUT input
-    );
-    
 endmodule

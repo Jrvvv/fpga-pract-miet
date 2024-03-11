@@ -39,19 +39,19 @@ module tb_demo ();
   );
 
   initial begin
-    clk   <= 1'b0;
-    clk_e <= 1'b0;
+    clk   = 1'b0;
+    clk_e = 1'b0;
   end
 
   initial begin
      #200
-     a <= 4'b1010;
-     b <= 4'b1100;
-     res_tb <= (~a) | ~(b);
-     #1
-     clk_e <= 1'b1;
+     a = 4'b1010;
+     b = 4'b1100;
+     res_tb = (~a) | ~(b);
+//     #1
+     clk_e = 1'b1;
      #2
-     clk_e <= 1'b0;
+     clk_e = 1'b0;
      #1
      if(res_tb != res)  $display("\nERROR!!!\n");
      
@@ -59,7 +59,7 @@ module tb_demo ();
      a = 4'b1010;
      b = 4'b1100;
      res_tb = (~a) | ~(b);
-     #1
+//     #1
      clk_e = 1'b1;
      #2
      clk_e = 1'b0;
@@ -70,7 +70,7 @@ module tb_demo ();
      a = 4'b1001;
      b = 4'b1100;
      res_tb = (~a) | ~(b);
-     #1
+//     #1
      clk_e = 1'b1;
      #2
      clk_e = 1'b0;
@@ -81,7 +81,7 @@ module tb_demo ();
      a = 4'b1000;
      b = 4'b1001;
      res_tb = (~a) | ~(b);
-     #1
+//     #1
      clk_e = 1'b1;
      #2
      clk_e = 1'b0;
@@ -92,11 +92,18 @@ module tb_demo ();
      a = 4'b1111;
      b = 4'b1101;
      res_tb = (~a) | ~(b);
-     #1
+//     #1
      clk_e = 1'b1;
      #2
      clk_e = 1'b0;
      #1
+     if(res_tb != res)  $display("\nERROR!!!\n"); 
+      #4  
+
+     #4
+     a = 4'b1001;
+     b = 4'b1100;
+     #3
      if(res_tb != res)  $display("\nERROR!!!\n"); 
       #4
      $finish;   
